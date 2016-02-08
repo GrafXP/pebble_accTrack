@@ -7,12 +7,14 @@ void handle_init(void) {
   my_window = window_create();
 
   text_layer = text_layer_create(GRect(0, 0, 144, 20));
+  text_layer_set_text(text_layer,"Hello World");
   window_stack_push(my_window, true);
 }
 
 void handle_deinit(void) {
   text_layer_destroy(text_layer);
   window_destroy(my_window);
+
 }
 
 int main(void) {
